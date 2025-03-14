@@ -1,0 +1,269 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    background: #6DD3E7;
+}
+
+.hero__left {
+    width: 62%;
+    padding: 4rem 0 4rem 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.hero__content {
+    color: white;
+    max-width: 500px;
+}
+
+.hero__title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0;
+}
+
+.hero__registered {
+    font-size: 1.5rem;
+    vertical-align: super;
+    margin-left: 2px;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0;
+}
+
+.hero__description {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0;
+}
+
+.hero__product {
+    width: 75%;
+    max-width: 350px;
+    margin-top: 2rem;
+}
+
+.hero__product-image {
+    width: 100%;
+}
+
+.hero__right {
+    width: 58%;
+    position: relative;
+    overflow: visible;
+    margin-left: -8%;
+}
+
+.hero__divider {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    z-index: 2;
+}
+
+.hero__badge {
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    z-index: 3;
+}
+
+.hero__badge-image {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.hero__blue-bg {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    right: 0;
+    background: var(--color-primary);
+    clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 1;
+}
+
+
+
+.hero__dog-image {
+    display: block;
+    position: absolute;
+    right: -12%;
+    width: 112%;
+    height: 108%;
+    object-fit: cover;
+    object-position: center 35%;
+    z-index: 2;
+    clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .hero {
+        height: 450px;
+    }
+
+    .hero__title {
+        font-size: 3.5rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.4rem;
+    }
+
+    .hero__description {
+        font-size: 1.4rem;
+    }
+
+    .hero__badge {
+        width: 140px;
+        height: 140px;
+        left: -70px;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    :root {
+        --color-primary: #6DD3E7;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+        background: var(--color-primary);
+        padding: 4rem 1.5rem;
+    }
+
+    .hero__left {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .hero__content {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .hero__title {
+        font-size: 3.5rem;
+        margin-bottom: 0.75rem;
+        letter-spacing: 1px;
+        line-height: 1;
+    }
+
+    .hero__subtitle {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+
+    .hero__description {
+        font-size: 2.75rem;
+        max-width: 75%;
+        margin: 0 auto 4rem;
+        line-height: 1.15;
+        font-weight: 300;
+    }
+
+    .hero__badge {
+        position: static;
+        width: 220px;
+        height: 220px;
+        margin: 3rem auto;
+        transform: none;
+    }
+
+    .hero__product {
+        display: flex;
+        gap: 2.5rem;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .hero__product-image {
+        width: 38%;
+        max-width: 180px;
+    }
+
+    .hero__right,
+    .hero__divider,
+    .hero__blue-bg,
+    .hero__dog-image {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero__description {
+        font-size: 2.25rem;
+        max-width: 85%;
+    }
+
+    .hero__badge {
+        width: 180px;
+        height: 180px;
+        margin: 2.5rem auto;
+    }
+
+    .hero__product {
+        gap: 1.5rem;
+    }
+}
